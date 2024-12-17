@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header>
+      <h1>Todo App</h1>
+      <p class="caption">A simple app to manage your Tasks Efficiently</p>
+    </header>
+
+   
+    <div class="form-container">
+      <input type="text" id="todoName" placeholder="Enter Todo Name" />
+      <select id="todoStatus">
+        <option value="incomplete">Incomplete</option>
+        <option value="complete">Complete</option>
+      </select>
+      <button onclick="addTodo()">Add Todo</button>
+    </div>
+    
+   
+    <div class="search-container">
+      <input type="text" id="searchText" placeholder="Search by Todo Name" oninput="searchTodo()" />
+      <select id="statusFilter" onchange="searchTodo()">
+        <option value="">All Status</option>
+        <option value="complete">Complete</option>
+        <option value="incomplete">Incomplete</option>
+      </select>
+    </div>
+
+   
+    <ul id="todoList"></ul>
+
+    
+    <button class="clear-all-btn" onclick="clearAllTodos()">Clear All</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Todo App. All Rights Reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
